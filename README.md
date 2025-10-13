@@ -1,4 +1,4 @@
-# FCO Flight Delays Toolkit
+# Flight Delays Toolkit
 
 Pipeline ETL in Python per normalizzare dati operativi voli (TSV), calcolare ritardi/anticipi, applicare regole di business e produrre report Excel affidabili. Progettata con standard “industrial-grade” orientati a **automazione**, **qualità dati** e **manutenibilità**.
 
