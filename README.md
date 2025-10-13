@@ -1,5 +1,5 @@
 
-# Documentazione – Ritardi
+# Delay_Calculator
 
 Questa guida descrive come usare l’app/script “Delay_Calculator”, come vengono calcolati **ritardi** e **anticipi**, quali **codici ritardo** sono considerati “handling” (e quindi esclusi dal calcolo “senza handling”), e quali file Excel vengono prodotti.
 
