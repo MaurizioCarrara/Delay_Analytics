@@ -7,7 +7,7 @@ from CNA_utils import (
 )
 
 
-def etihad(df: pd.DataFrame, filename: str = "FCO_Delays_ETHIAD.xlsx") -> str:
+def etihad(df: pd.DataFrame, filename: str = "Delays_ETHIAD.xlsx") -> str:
     """
     Partenze EY/ETIHAD/ETHIAD, calcolo/uso DLY_REAL (min, >0), ordinamento per STD asc,
     Excel con righe evidenziate se DLY_REAL > 60.
@@ -35,7 +35,7 @@ def etihad(df: pd.DataFrame, filename: str = "FCO_Delays_ETHIAD.xlsx") -> str:
     return path
 
 
-def united(df: pd.DataFrame, filename: str = "FCO_Delays_UNITED.xlsx") -> str:
+def united(df: pd.DataFrame, filename: str = "Delays_UNITED.xlsx") -> str:
     """
     Allinea A (arrivo) e D (partenza) per IATA='UA' su ID; calcola DLY_REAL (min, >0),
     ADV_IN (min anticipo arrivo), %TURN_RATE_IN/OUT, DLY_WO_HNDLG e INFO_REQUIRED.
@@ -171,7 +171,7 @@ def united(df: pd.DataFrame, filename: str = "FCO_Delays_UNITED.xlsx") -> str:
     return path
 
 
-def delta(df: pd.DataFrame, filename: str = "FCO_Delays_DELTA.xlsx") -> str:
+def delta(df: pd.DataFrame, filename: str = "Delays_DELTA.xlsx") -> str:
     """
     Allinea A e D per IATA='DL' su ID; calcola DLY_REAL; definisce SURCHARGE:
       - 30% se DLY_REAL>180 e 07:00≤ATD≤21:00 e nessuno dei due FLT_TYPE è 'FERRY'
@@ -274,7 +274,7 @@ def ritardo_generico(df: pd.DataFrame, iata_code: str, min_minutes: int,
 
     iata = str(iata_code).strip().upper()
     if filename is None:
-        filename = f"FCO_Delays_{iata}_{int(min_minutes)}.xlsx"
+        filename = f"Delays_{iata}_{int(min_minutes)}.xlsx"
 
     base = df.copy()
     base["IATA"] = base["IATA"].astype(str).str.strip().str.upper()
@@ -323,7 +323,7 @@ def ritardo_generico(df: pd.DataFrame, iata_code: str, min_minutes: int,
     return path
 
 
-def arkia(df: pd.DataFrame, filename: str = "FCO_Delays_ARKIA.xlsx") -> str:
+def arkia(df: pd.DataFrame, filename: str = "Delays_ARKIA.xlsx") -> str:
     """
     Partenze IATA='IZ', join con arrivo, DLY_REAL, DLY_WO_HNDLG, SURCHARGE per scaglioni
     (20% 91–120, 30% 121–180, 45% >180); evidenzia righe con SURCHARGE.
@@ -405,7 +405,7 @@ def anticipo_generico(df: pd.DataFrame, iata_code: str, min_minutes: int,
 
     iata = str(iata_code).strip().upper()
     if filename is None:
-        filename = f"FCO_Early_{iata}_{int(min_minutes)}.xlsx"
+        filename = f"Early_{iata}_{int(min_minutes)}.xlsx"
 
     base = df.copy()
     base["IATA"] = base["IATA"].astype(str).str.strip().str.upper()
@@ -453,3 +453,4 @@ def anticipo_generico(df: pd.DataFrame, iata_code: str, min_minutes: int,
     path = write_excel(out, filename, sheet=f"{iata}_A_{int(min_minutes)}", highlighter=_hl)
     print(f"File Excel creato: {path}  (righe: {out.shape[0]})")
     return path
+
