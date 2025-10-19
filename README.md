@@ -1,5 +1,10 @@
 
 # Delay_Calculator
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Excel](https://img.shields.io/badge/Excel-Automation-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.python.org/)
+[![IATA](https://img.shields.io/badge/IATA_Codes-Compliant-blue?style=for-the-badge)]()
+
 
 Questa guida descrive come usare l’app/script “Delay_Calculator”, come vengono calcolati **ritardi** e **anticipi**, quali **codici ritardo** sono considerati “handling” (e quindi esclusi dal calcolo “senza handling”), e quali file Excel vengono prodotti.
 
