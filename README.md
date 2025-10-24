@@ -21,7 +21,7 @@
 ### Data Processing Pipeline
 Raw Data     → Normalization     → Business Logic     → Multi-Format Reporting
 
-TXT/TSV       Column Mapping      Airline Rules        Excel + Analytics
+TXT/TSV      →Column Mapping     → Airline Rules      →  Excel + Analytics
 
 ### Core Features
 - **Intelligent Data Normalization**: Automatic conversion of multi-format timestamps and airline codes
