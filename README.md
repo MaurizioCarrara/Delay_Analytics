@@ -20,6 +20,7 @@
 
 ### Data Processing Pipeline
 Raw Data     → Normalization     → Business Logic     → Multi-Format Reporting
+
 TXT/TSV       Column Mapping      Airline Rules        Excel + Analytics
 
 ### Core Features
