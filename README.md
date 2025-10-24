@@ -48,16 +48,18 @@ TXT/TSV      →Column Mapping     → Airline Rules      →  Excel + Analytics
 ## Operational Impact
 
 ### Before
-- Manual data processing: 45-60 minutes daily
+- Manual data processing: 240 minutes monthly
 - Human error in delay code attribution
 - Inconsistent reporting across airlines
 - Delayed billing for handling services
+- Operational or database error not detected
 
 ### After  
 - Fully automated processing: <2 minutes
 - Standardized IATA-compliant calculations
 - Consistent multi-carrier reporting
 - Real-time surcharge identification
+- Error detection
 
 ## Technical Implementation
 
